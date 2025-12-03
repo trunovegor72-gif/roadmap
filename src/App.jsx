@@ -12,7 +12,6 @@ function App() {
   const [error, setError] = useState('');
   const [isDragging, setIsDragging] = useState(false);
   
-  // Ref для drag & drop области
   const dropAreaRef = useRef(null);
 
   // Обработчик перетаскивания файлов
@@ -35,7 +34,7 @@ function App() {
     const handleDragLeave = (e) => {
       e.preventDefault();
       e.stopPropagation();
-      // Проверяем, действительно ли мы вышли из dropArea
+
       if (!e.currentTarget.contains(e.relatedTarget)) {
         setIsDragging(false);
       }
@@ -52,13 +51,11 @@ function App() {
       }
     };
 
-    // Добавляем обработчики событий
     dropArea.addEventListener('dragenter', handleDragEnter);
     dropArea.addEventListener('dragover', handleDragOver);
     dropArea.addEventListener('dragleave', handleDragLeave);
     dropArea.addEventListener('drop', handleDrop);
 
-    // Обработчики для всего документа (для визуальной обратной связи)
     const handleGlobalDragEnter = (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -92,11 +89,9 @@ function App() {
     };
   }, []);
 
-  // Функция обработки перетащенного файла
   const handleDroppedFile = (file) => {
     if (!file) return;
 
-    // Проверка типа файла
     if (!file.name.endsWith('.json') && file.type !== 'application/json') {
       setError('Пожалуйста, перетащите JSON файл');
       return;
@@ -105,7 +100,6 @@ function App() {
     handleFileUpload({ target: { files: [file] } });
   };
 
-  // Существующий обработчик (немного улучшим)
   const handleFileUpload = (event) => {
     const file = event.target.files ? event.target.files[0] : event;
     if (!file) return;
@@ -113,7 +107,6 @@ function App() {
     setLoading(true);
     setError('');
 
-    // Проверка типа файла
     if (!file.name.endsWith('.json') && file.type !== 'application/json') {
       setError('Пожалуйста, выберите JSON файл');
       setLoading(false);
@@ -140,7 +133,6 @@ function App() {
     reader.readAsText(file);
   };
 
-  // Обработчик клика по области загрузки
   const handleUploadAreaClick = () => {
     document.getElementById('file-upload').click();
   };
@@ -265,6 +257,7 @@ function App() {
         </footer>
       </div>
     </Router>
+    //
   );
 }
 
