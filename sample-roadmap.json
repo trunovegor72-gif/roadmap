@@ -1,0 +1,52 @@
+{
+  "id": "react-roadmap",
+  "title": "React Developer Roadmap",
+  "description": "Полный путь изучения React.js от основ до продвинутых концепций",
+  "topics": [
+    {
+      "id": "1",
+      "title": "Основы JavaScript",
+      "description": "Синтаксис ES6+, асинхронное программирование, работа с DOM",
+      "links": [
+        {"title": "MDN JavaScript Guide", "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide"},
+        {"title": "JavaScript.info", "url": "https://learn.javascript.ru/"}
+      ],
+      "status": "not_started",
+      "userNotes": "",
+      "targetDate": null
+    },
+    {
+      "id": "2",
+      "title": "Основы React и JSX",
+      "description": "Компоненты, пропсы, JSX синтаксис, Virtual DOM",
+      "links": [
+        {"title": "Официальная документация", "url": "https://react.dev/learn"}
+      ],
+      "status": "in_progress",
+      "userNotes": "Изучил базовые компоненты, разбираюсь с пропсами",
+      "targetDate": "2024-12-15"
+    },
+    {
+      "id": "3",
+      "title": "Состояние и жизненный цикл",
+      "description": "Хуки useState и useEffect, управление состоянием компонентов",
+      "links": [
+        {"title": "React Hooks Guide", "url": "https://react.dev/reference/react/hooks"}
+      ],
+      "status": "not_started",
+      "userNotes": "",
+      "targetDate": null
+    },
+    {
+      "id": "4",
+      "title": "Маршрутизация",
+      "description": "React Router, навигация в SPA приложениях",
+      "links": [
+        {"title": "React Router Docs", "url": "https://reactrouter.com/"}
+      ],
+      "status": "completed",
+      "userNotes": "Прошел курс по React Router v6, создал тестовое приложение",
+      "targetDate": "2024-11-10"
+    }
+  ]
+}
